@@ -1,6 +1,4 @@
-import { Register } from './Register/Register';
-import { LogIn } from './LogIn/LogIn';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { Contacts } from './Contacts/Contacts';
 import { Header } from './NavMenu/NavMenu';
 import { refresh } from 'redux/authOperations';
@@ -10,6 +8,8 @@ import { fetchContacts } from 'redux/operations';
 import { ProtectedRoute } from './ProtectedRoute/ProtectedRoute';
 import { selectIsLoggedIn } from 'redux/selectors';
 import { useSelector } from 'react-redux';
+import { SignIn } from './SignIn/SignIn';
+import { SignUp } from './SignUp/SignUp';
 
 export const App = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -27,11 +27,12 @@ export const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Header />}>
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<LogIn />} />
+          <Route path="/register" element={<SignUp />}></Route>
+          <Route path="/login" element={<SignIn />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/contacts" element={<Contacts />} />
           </Route>
+          <Route path="*" element={<Navigate to="/contacts" />} />
         </Route>
       </Routes>
     </>

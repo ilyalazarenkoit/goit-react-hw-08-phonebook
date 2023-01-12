@@ -1,0 +1,21 @@
+.NavLink {
+  text-decoration: none;
+  color: grey;
+  font-size: 24px;
+}
+
+.navLinkWrapper {
+  margin-top: 20px;
+  display: flex;
+  gap: 200px;
+  align-items: center;
+  justify-content: center;
+}
+.placeHolder {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  text-align: center;
+  font-size: 35px;
+  color: grey;
+}
