@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 import styles from '../UserMenu/UserMenu.module.css';
 import { Button } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { grey } from '@mui/material/colors';
 
 const theme = createTheme({
   palette: {
