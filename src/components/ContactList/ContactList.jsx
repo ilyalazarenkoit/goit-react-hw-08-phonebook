@@ -1,7 +1,7 @@
 import listStyles from '../ContactList/ContactList.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts, selectFilter } from 'redux/selectors';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/operations';
 
 const ContactList = () => {
   const dispatch = useDispatch();

@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { logOut } from 'redux/authOperations';
+import { logOut } from 'redux/user/authOperations';
 import { selectUsername } from 'redux/selectors';
 import { useSelector } from 'react-redux';
 import styles from '../UserMenu/UserMenu.module.css';
